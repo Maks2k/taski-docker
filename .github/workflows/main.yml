@@ -12,5 +12,5 @@ jobs:
       - name: Checkout repositiry code
         uses: actions/checkout@v3
       - name: Print project three
-        uses: three .
+        uses: tree .
 
