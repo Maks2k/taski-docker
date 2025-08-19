@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     services:
       postgress:
-        image: postgress:13.10
+        image: postgres:13.10
         env:
           POSTGRES_USER: django_user
           POSTGRES_PASSWORD: django_password
@@ -23,7 +23,7 @@ jobs:
     - name: Check out code
       uses: actions/checkout@v3
 
-    - name: Set upPython
+    - name: Set up Python
       uses: actions/setup-python@v4
       # В action setup-python@v4 передаём параметр — версию Python
       with:
