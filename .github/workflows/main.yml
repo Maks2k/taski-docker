@@ -65,13 +65,13 @@ jobs:
           password: ${{secrets.DOCKER_PASSWORD}}
 
       - name: Push to dockerHub
-          uses: docker/build-push-action@v4
-          with:
+        uses: docker/build-push-action@v4
+        with:
          #где лежит нужный Файл 
-            context: ./backend
+          context: ./backend
           # Параметр push: true указывает, что образ нужно не только собрать,
           # но и отправить на Docker Hub
-            push: true
+          push: true
           #В параметре tags задается название и тэг для образа
           #устанавливаем latest тобы потом не указывать версию
-            tags: maks2k/taski_backend:latest
+          tags: maks2k/taski_backend:latest
